@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>to-do</title>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="mainController as ctrl">
+        <p>{{ctrl.appName}}</p>
+        <input type="text" ng-model="ctrl.numbersRaw">
+        <button ng-click="ctrl.getNumbers()">Arrange</button>
+        <ul>
+            <li ng-repeat="number in ctrl.numbers">{{number}}
+                <list-component></list-component>
+            </li>
+        </ul>
+    </div>
+    <list-component></list-component>
+</body>
+
+</html>
